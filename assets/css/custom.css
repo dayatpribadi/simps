@@ -1,7 +1,5 @@
-/*
-Template Name: Velzon - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: support@themesbrand.com
-File: Custom Css File
-*/
+.bg-page-content {
+    background-image: url(../images/medicine.jpg);
+    background-size: cover;
+    background-position: bottom right;
+}
