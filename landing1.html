@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Admin & Dashboard SIDODI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+    <!-- Begin page -->
+    <div class="layout-wrapper landing">
+
+        <!-- start contact -->
+        <section class="section" id="contact" style="height: 100vh;">
+            <div class="bg-overlay bg-overlay-pattern2"></div>
+            <div class="container">
+                <div class="row m-0 mt-lg-5">
+                    <div class="lgoo text-start mb-4">
+                        <img src="./assets/images/pattern/dodi.png" width="150" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="text-start mb-5">
+                            <h3 class="mb-3 fw-semibold">Sistem Informasi Dokumen Desa Terintegrasi (SIDODI)</h3>
+                            <p class="text-muted mb-4 ff-secondary"> KABUPATEN OGAN ILIR </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row gy-4 mt-lg-5">
+                    <div class="col-lg-7">
+                        <div>
+                            <div class="mt-4">
+                                <h5 class="fs-13 text-muted text-uppercase"><i class="bx bx-street-view fs-4"></i> Kantor :</h5>
+                                <div class="ff-secondary fw-semibold">
+                                    Dinas Terkait Aplikasi Sidodi
+                                    <br>
+                                    Jl. Lintas Timur KM. 35 Indralaya
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fs-13 text-muted text-uppercase"><i class="bx bxs-envelope"></i> Email :</h5>
+                                <div class="ff-secondary fw-semibold">sidodi@mail.go.id</div>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fs-13 text-muted text-uppercase"><i class="bx bxs-phone-call"></i> WA Center :</h5>
+                                <div class="ff-secondary fw-semibold">+62 821 1234 5678</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-5">
+                        <div class="row">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="mb-4">
+                                            <label for="name" class="form-label fs-13">Username</label>
+                                            <input name="name" id="username" type="text" class="form-control bg-light" placeholder="Username*">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="mb-4">
+                                            <label for="password" class="form-label fs-13">Password</label>
+                                            <input type="password" class="form-control bg-light" id="password" name="subject" placeholder="Your password.." />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-lg-12 mb-3 ">
+                                        <div class="input-group-text">
+                                           <div class="w-100"> <img src="https://jadwalinbae.oganilirkab.go.id/captcha/default?NS0dboWh" ></div> 
+                                            
+                                            <button type="button" class="btn btn-icon text-danger" id="reload"
+                                                wire:click.prevent="reloadCaptcha()">
+                                                <i class="fa fa-undo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <input id="captcha" type="text" class="form-control margin-bottom "
+                                            placeholder="Masukkan Captcha" wire:model.defer="captcha">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-end">
+                                        <a href="./nft-landing.html" type="button" class="btn btn-primary"><i class="bx bxs-log-in-circle me-2"></i> Login </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="logo-bersama mt-5">
+                            <img src="./assets/images/pattern/icon-ogan-ilir-D-7ardEV89.png" width="50" alt="">
+                            <img src="./assets/images/pattern/logo-diskominfo.png" width="150" alt="">
+                            <img src="./assets/images/pattern/oganilirbangkit.png" width="105" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end contact -->
+
+        <!--start back-to-top-->
+        <button onclick="topFunction()" class="btn btn-danger btn-icon landing-back-top" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!--end back-to-top-->
+
+    </div>
+    <!-- end layout wrapper -->
+
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- landing init -->
+    <script src="assets/js/pages/landing.init.js"></script>
+</body>
+
+</html>
