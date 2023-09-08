@@ -11,11 +11,14 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- plugin css -->
-    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
     <!-- Sweet Alert css-->
     <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- jsvectormap css -->
+    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
@@ -27,6 +30,7 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -341,7 +345,7 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="__dashboard.html">
+                            <a class="nav-link menu-link" href="__dashboard.html" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                                 <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboards</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
@@ -604,12 +608,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Data Pasien</h4>
+                                <h4 class="mb-sm-0">e-puskesmas</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Master Data</a></li>
-                                        <li class="breadcrumb-item active">Data Pasien</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                        <li class="breadcrumb-item active">e-puskesmas</li>
                                     </ol>
                                 </div>
 
@@ -617,202 +621,300 @@
                         </div>
                     </div>
                     <!-- end page title -->
-                    <div class="row">
+
+                    <div class="row dash-nft">
                         <div class="col-12">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <div class="d-flex align-items-center">
-                                        <h5 class="card-title mb-0 flex-grow-1"></h5>
-                                        <div class="flex-shrink-0">
-                                           <div class="d-flex flex-wrap gap-2">
-                                                <button class="btn btn-danger add-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-task-line align-bottom me-1"></i> Fitur Tunda</button>
-                                                <a href="__buat_data_pasien.html" type="button" class="btn btn-primary add-btn" ><i class="ri-add-line align-bottom me-1"></i> Buat Baru</a>
-                                           </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body border border-dashed border-end-0 border-start-0">
-                                    <form>
-                                        <div class="row g-3">
-                                            <div class="col-xxl-5 col-sm-12">
-                                                <div class="search-box">
-                                                    <input type="text" class="form-control search bg-light border-light" placeholder="Cari data pasien...">
-                                                    <i class="ri-search-line search-icon"></i>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-body bg-marketplace d-flex">
+                                            <div class="flex-grow-1">
+                                                <h4 class="fs-18 lh-base mb-0">Selamat Datang, <br> Administrator <span class="text-success">e-puskesmas</span> </h4>
+                                                <p class="mb-0 mt-2 pt-1 text-muted">Sistem Informasi Puskesmas Kabupaten Ogan Ilir.</p>
+                                                <div class="d-flex gap-3 mt-4">
+                                                    <a href="__datapasien.html" class="btn btn-primary">Data Pasien </a>
+                                                    <a href="__buat_baru_pendaftaran.html" class="btn btn-success">Pendaftaran</a>
                                                 </div>
                                             </div>
-                                            <!--end col-->
+                                            <img src="assets/images/widget-img.png" alt="" height="150" />
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-height-100 bg-primary">
+                                        <div class="card-body">
 
-                                            <div class="col-xxl-3 col-sm-4">
-                                                <input type="text" class="form-control bg-light border-light" id="demo-datepicker" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true" placeholder="Berdasarkan tanggal">
-                                            </div>
-                                            <!--end col-->
-
-                                            <div class="col-xxl-3 col-sm-4">
-                                                <div class="input-light">
-                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="idStatus">
-                                                        <option value="">Status</option>
-                                                        <option value="New" selected>Aktif</option>
-                                                        <option value="Pending">Tunda</option>
-                                                        <option value="Inprogress">Tidak Aktif</option>
-                                                    </select>
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-soft-light rounded fs-3">
+                                                        <i class="bx bx-user-circle text-white"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1 ps-3">
+                                                    <h5 class="text-white text-uppercase fs-13 mb-0">Total Pendaftar Hari Ini</h5>
                                                 </div>
                                             </div>
-                                            <!--end col-->
-                                            <div class="col-xxl-1 col-sm-4">
-                                                <button type="button" class="btn btn-primary w-100" onclick="SearchData();"> <i class="ri-equalizer-fill me-1 align-bottom"></i>
-                                                    Filters
-                                                </button>
+                                            <div class="mt-4 pt-1">
+                                                <h4 class="fs-22 fw-semibold text-white mb-0"><span class="counter-value" data-target="126"></span> </h4>
+                                                <p class="mt-4 mb-0 text-white"><span class="badge bg-white text-danger mb-0 me-1"> <i class="ri-arrow-down-line align-middle"></i> 3.96 % </span> dari bulan lalu</p>
                                             </div>
-                                            <!--end col-->
-                                        </div>
-                                        <!--end row-->
-                                    </form>
-                                </div>
-
-                                <div class="card-body">
-                                    <p class="text-muted">Use <code>table</code> class to show bootstrap-based default table.</p>
-                                    <div class="live-preview">
-                                        <div class="table-responsive">
-                                            <!-- Hoverable Rows -->
-                                            <table class="table table-hover table-nowrap mb-0">
-                                                <thead class="bg-info">
-                                                    <tr>
-                                                        <th scope="col">No</th>
-                                                        <th scope="col">No. RM</th>
-                                                        <th scope="col">KTP</th>
-                                                        <th scope="col">Nama</th>
-                                                        <th scope="col">Usia</th>
-                                                        <th scope="col">Tempat, Tgl. Lahir</th>
-                                                        <th scope="col">Jenis Kelamin</th>
-                                                        <th scope="col">Alamat</th>
-                                                        <th scope="col">No. Asuransi</th>
-                                                        <th scope="col">Aksi</th>
-                                                        <th scope="col">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="checkAll" value="option1">
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>#541254265</td>
-                                                        <td>161000092010191919</td>
-                                                        <td>Cleo Carson</td>
-                                                        <td>65 Tahun</td>
-                                                        <td>Palembang, 18 Agustus 1945</td>
-                                                        <td>Laki-Laki</td>
-                                                        <td>Indralaya</td>
-                                                        <td>541254265-BPJS</td>
-                                                        <td><a href="javascript:void(0);"><i class="ri-download-2-line"></i></a></td>
-                                                        <th scope="row">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1" checked>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>#744145235</td>
-                                                        <td>161440092010191919</td>
-                                                        <td>Juston Eichmann</td>
-                                                        <td>65 Tahun</td>
-                                                        <td>Palembang, 18 Agustus 1945</td>
-                                                        <td>Laki-Laki</td>
-                                                        <td>Indralaya</td>
-                                                        <td>541254265-BPJS</td>
-                                                        <td><a href="javascript:void(0);"><i class="ri-download-2-line"></i></a></td>
-                                                        <th scope="row">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1" checked>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>#9855126598</td>
-                                                        <td>161990092010191919</td>
-                                                        <td>Bettie Johson</td>
-                                                        <td>65 Tahun</td>
-                                                        <td>Palembang, 18 Agustus 1945</td>
-                                                        <td>Laki-Laki</td>
-                                                        <td>Indralaya</td>
-                                                        <td>541254265-BPJS</td>
-                                                        <td><a href="javascript:void(0);"><i class="ri-download-2-line"></i></a></td>
-                                                        <th scope="row">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>#847512653</td>
-                                                        <td>161020092010191919</td>
-                                                        <td>Maritza Blanda</td>
-                                                        <td>65 Tahun</td>
-                                                        <td>Palembang, 18 Agustus 1945</td>
-                                                        <td>Laki-Laki</td>
-                                                        <td>Indralaya</td>
-                                                        <td>541254265-BPJS</td>
-                                                        <td><a href="javascript:void(0);"><i class="ri-download-2-line"></i></a></td>
-                                                        <th scope="row">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
-
-                                    <div class="text-end mt-3 mb-2">
-                                        <!-- <button type="submit" class="btn btn-danger w-sm">Delete</button> -->
-                                        <button type="button" id="custom-sa-hapus" class="btn btn-danger add-btn" ><i class=" ri-delete-bin-line align-bottom me-1"></i> Hapus</button>
+                                </div><!--end col-->
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-height-100 bg-warning">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-soft-info rounded fs-3">
+                                                        <i class="bx bx-user-circle text-primary"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1 ps-3">
+                                                    <h5 class="text-primary text-uppercase fs-13 mb-0">Pendaftar dari Pasien BPJS</h5>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4 pt-1">
+                                                <h4 class="fs-22 fw-semibold text-primary mb-0"><span class="counter-value" data-target="235"></span> </h4>
+                                                <p class="mt-4 mb-0 text-primary"><span class="badge bg-white text-primary mb-0"> <i class="ri-arrow-up-line align-middle"></i> 16.24 % </span> dari bulan lalu</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
- 
-                            </div>
-                        </div>
+                            </div><!--end row-->
+
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card crm-widget">
+                                        <div class="card-body p-0">
+                                            <div class="row row-cols-md-3 row-cols-1">
+                                                <div class="col col-lg border-end">
+                                                    <div class="py-4 px-3">
+                                                        <h5 class="text-muted text-uppercase fs-13">Kunungan Loket <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i>
+                                                        </h5>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="ri-hospital-line display-6 text-muted"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h2 class="mb-0"><span class="counter-value" data-target="197">0</span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col col-lg border-end">
+                                                    <div class="mt-3 mt-md-0 py-4 px-3">
+                                                        <h5 class="text-muted text-uppercase fs-13">Kunjungan Poli <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i></h5>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="ri-hospital-line display-6 text-muted"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h2 class="mb-0"><span class="counter-value" data-target="489">0</span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col col-lg border-end">
+                                                    <div class="mt-3 mt-md-0 py-4 px-3">
+                                                        <h5 class="text-muted text-uppercase fs-13">
+                                                            Kunjungan Laboratorium <i class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i>
+                                                        </h5>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="ri-pulse-line display-6 text-muted"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h2 class="mb-0"><span class="counter-value" data-target="32">0</span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col col-lg border-end">
+                                                    <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                        <h5 class="text-muted text-uppercase fs-13">
+                                                            Pasien Terdaftar <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i>
+                                                        </h5>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="ri-group-line display-6 text-muted"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h2 class="mb-0"><span class="counter-value" data-target="559526">0</span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col col-lg">
+                                                    <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                        <h5 class="text-muted text-uppercase fs-13">
+                                                            Pasien BPJS <i class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i>
+                                                        </h5>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="ri-team-line display-6 text-muted"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h2 class="mb-0"><span class="counter-value" data-target="624562">0</span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                            </div><!-- end row -->
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+
+                            <div class="row">
+                                <div class="col-xxl-12">
+                                    <div class="card">
+                                        <div class="card-body p-0">
+                                            <div class="row g-0">
+                                                <div class="col-xxl-8">
+                                                    <div class="">
+                                                        <div class="card-header border-0 align-items-center d-flex">
+                                                            <h4 class="card-title mb-0 flex-grow-1">Status Kunjungan Pasien</h4>
+                                                            <div>
+                                                                <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                                    ALL
+                                                                </button>
+                                                                <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                                    1M
+                                                                </button>
+                                                                <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                                    6M
+                                                                </button>
+                                                                <button type="button" class="btn btn-soft-primary btn-sm">
+                                                                    1Y
+                                                                </button>
+                                                            </div>
+                                                        </div><!-- end card header -->
+                                                        <div id="line_chart_annotations" data-colors='["--vz-primary"]' class="apex-charts" dir="ltr"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xxl-4">
+                                                    <div class="border-start h-100 d-flex flex-column">
+
+                                                        <div class="">
+                                                            <div class="card-header border-bottom-dashed align-items-center d-flex">
+                                                                <h4 class="card-title mb-0 flex-grow-1">Riwayat Aktifitas Login</h4>
+                                                                <div class="flex-shrink-0">
+                                                                    <button type="button" class="btn btn-soft-primary btn-sm">
+                                                                        Lihat semua
+                                                                    </button>
+                                                                </div>
+                                                            </div><!-- end cardheader -->
+                                                            <div class="card-body p-0 mb-3">
+                                                                <div data-simplebar style="max-height: 364px;" class="p-3">
+                                                                    <div class="acitivity-timeline acitivity-main">
+                                                                        <div class="acitivity-item d-flex">
+                                                                            <div class="flex-shrink-0 avatar-xs acitivity-avatar">
+                                                                                <div class="avatar-title bg-soft-success text-success rounded-circle">
+                                                                                    <i class="ri-shopping-cart-2-line"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Purchase by James Price</h6>
+                                                                                <p class="text-muted mb-1">Product noise evolve smartwatch</p>
+                                                                                <small class="mb-0 text-muted">02:14 PM Today</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item py-3 d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar">
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Natasha Carey have liked the products</h6>
+                                                                                <p class="text-muted mb-1">Allow users to like products in your WooCommerce store.</p>
+                                                                                <small class="mb-0 text-muted">25 Dec, 2021</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item py-3 d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="avatar-xs acitivity-avatar">
+                                                                                    <div class="avatar-title rounded-circle bg-secondary">
+                                                                                        <i class="mdi mdi-sale fs-14"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Today offers by <a href="apps-ecommerce-seller-details.html" class="link-secondary">Digitech Galaxy</a></h6>
+                                                                                <p class="text-muted mb-2">Offer is valid on orders of Rs.500 Or above for selected products only.</p>
+                                                                                <small class="mb-0 text-muted">12 Dec, 2021</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item py-3 d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="avatar-xs acitivity-avatar">
+                                                                                    <div class="avatar-title rounded-circle bg-soft-danger text-danger">
+                                                                                        <i class="ri-bookmark-fill"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Favoried Product</h6>
+                                                                                <p class="text-muted mb-2">Esther James have favorited product.</p>
+                                                                                <small class="mb-0 text-muted">25 Nov, 2021</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item py-3 d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="avatar-xs acitivity-avatar">
+                                                                                    <div class="avatar-title rounded-circle bg-secondary">
+                                                                                        <i class="mdi mdi-sale fs-14"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Flash sale starting <span class="text-primary">Tomorrow.</span></h6>
+                                                                                <p class="text-muted mb-0">Flash sale by <a href="javascript:void(0);" class="link-secondary fw-medium">Zoetic Fashion</a></p>
+                                                                                <small class="mb-0 text-muted">22 Oct, 2021</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item py-3 d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="avatar-xs acitivity-avatar">
+                                                                                    <div class="avatar-title rounded-circle bg-soft-info text-info">
+                                                                                        <i class="ri-line-chart-line"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Monthly sales report</h6>
+                                                                                <p class="text-muted mb-2"><span class="text-danger">
+                                                                                        2 days left</span> notification to submit the monthly sales report. <a href="javascript:void(0);" class="link-warning text-decoration-underline">Reports Builder</a>
+                                                                                </p>
+                                                                                <small class="mb-0 text-muted">15 Oct</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="acitivity-item d-flex">
+                                                                            <div class="flex-shrink-0">
+                                                                                <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar" />
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-3">
+                                                                                <h6 class="mb-1">Frank Hook Commented</h6>
+                                                                                <p class="text-muted mb-2 fst-italic">" A product that has reviews is more likable to be sold than a product. "</p>
+                                                                                <small class="mb-0 text-muted">26 Aug, 2021</small>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card body -->
+                                                        </div><!-- end card -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end col-->
+                            </div><!--end row-->
+                        </div><!--end col-->
+
                     </div>
-
-                    <div class="row g-0 text-center text-sm-start align-items-center mb-4">
-                        <div class="col-sm-6">
-                            <div>
-                                <p class="mb-sm-0 text-muted">Showing <span class="fw-semibold">1</span> to <span class="fw-semibold">10</span> of <span class="fw-semibold text-decoration-underline">12</span> entries</p>
-                            </div>
-                        </div>
-                        <!-- end col -->
-                        <div class="col-sm-6">
-                            <ul class="pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                <li class="page-item disabled">
-                                    <a href="#" class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">Next</a>
-                                </li>
-                            </ul>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-
-
+                    <!--end row-->
 
                 </div>
                 <!-- container-fluid -->
@@ -880,6 +982,9 @@
 
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- linecharts init -->
+    <script src="assets/js/pages/apexcharts-line.init.js"></script>
+    <script src="https://img.themesbrand.com/velzon/apexchart-js/stock-prices.js"></script>
 
     <!-- Vector map-->
     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
@@ -887,9 +992,19 @@
 
     <!-- Dashboard init -->
     <script src="assets/js/pages/dashboard-analytics.init.js"></script>
-
+    <!-- Marketplace init -->
+    <script src="assets/js/pages/dashboard-nft.init.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
