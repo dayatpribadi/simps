@@ -604,12 +604,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Buat Baru Pendaftaran</h4>
+                                <h4 class="mb-sm-0">Data Pendaftaran</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Pelayanan</a></li>
-                                        <li class="breadcrumb-item active">Buat Baru Pendaftaran</li>
+                                        <li class="breadcrumb-item active">Data Pendaftaran</li>
                                     </ol>
                                 </div>
 
@@ -617,514 +617,379 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <div class="row justify-content-center">
+                    <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <form class="needs-validation" novalidate id="invoice_form">
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3">
-                                            <div class="col-lg-6 col-sm-6">
-                                                <div class="mt-3">
-                                                    <h6 class="text-muted text-uppercase fw-semibold mb-3">Data Pasien :</h6>
-                                                    <p class="text-muted mb-1">No. eRM : <span class="fw-bold" id="payment-method">0000-0000-0023-0109</span></p>
-                                                    <p class="text-muted mb-1">No. eRM Lama : <span class="fw-bold" id="card-holder-name">23-009828272</span></p>
-                                                    <p class="text-muted mb-1">No. Dokumen RM : <span class="fw-bold" id="card-number">xxx xxxx xxxx 1234</span></p>
-                                                    <p class="text-muted mb-1">NIK : <span class="fw-bold" id=""></span><span id="card-total-amount">16009288827260001</span></p>
-                                                    <p class="text-muted mb-1">Nama Pasien : <span class="fw-bold" id=""></span><span id="card-total-amount">Ny. Nyimas Ayu</span></p>
-                                                    <p class="text-muted mb-1">Jenis Kelamin : <span class="fw-bold" id=""></span><span id="card-total-amount">Perempuan</span></p>
-                                                    <p class="text-muted mb-1">Tgl. lahir : <span class="fw-bold" id=""></span><span id="card-total-amount">21 April 1976</span></p>
-                                                    <p class="text-muted mb-1">Alamat : <span class="fw-bold" id=""></span><span id="card-total-amount">Indralaya</span></p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                                                    <button type="button" id="sa-simpan" class="btn btn-success"><i class="ri-save-line align-bottom me-1"></i> Simpan</button>
-                                                    <a href="javascript:void(0);" class="btn btn-danger"><i class="ri-restart-line align-bottom me-1"></i> Reset</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <label for="exampleFormControlTextarea1" class="form-label text-muted text-uppercase fw-semibold">NOTES</label>
-                                                <textarea class="form-control alert alert-info" id="exampleFormControlTextarea1" placeholder="Notes" rows="1" required>Untuk mendapatkan data pasien, Isikan Nomor Rekam Medis pada kolom Data Pasien</textarea>
-                                            </div>
-
+                                <div class="card-header border-0">
+                                    <div class="d-flex align-items-center">
+                                        <h5 class="card-title mb-0 flex-grow-1"></h5>
+                                        <div class="flex-shrink-0">
+                                           <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-warning add-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-task-line align-bottom me-1"></i> Fitur Tunda</button>
+                                                <a href="__buat_baru_pendaftaran.html" type="button" class="btn btn-info add-btn" ><i class="ri-add-line align-bottom me-1"></i> Tambah</a>
+                                                <a href="#" type="button" class="btn btn-info add-btn" ><i class="ri-flask-line align-bottom me-1"></i> Daftar Laboratorium</a>
+                                                <a href="#" type="button" class="btn btn-success add-btn" ><i class="ri-wheelchair-line align-bottom me-1"></i> Daftar Rencana Kontrol</a>
+                                                <a href="#" type="button" class="btn btn-primary add-btn" ><i class="ri-printer-line align-bottom me-1"></i> Cetak</a>
+                                                <a href="#" type="button" class="btn btn-primary add-btn" ><i class="ri-file-excel-line align-bottom me-1"></i> Export Excel</a>
+                                           </div>
                                         </div>
                                     </div>
-
-                                    <div class="card-body p-4">
+                                </div>
+                                <div class="card-body border border-dashed border-end-0 border-start-0">
+                                    <form>
                                         <div class="row g-3">
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="pendf">Id Pendaftaran (Otomatis Terisi)</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="231112-001" disabled>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="noantre">No Antrean</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Isikan nomor antrian">
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="noantre">Data Pasien</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control border-1 card-border-danger bg-soft-danger" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Isikan nomor rekam medis">
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label for="tempatlahir" class="form-label">Kunjungan <span class="text-danger">*</span></label>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck11" checked>
-                                                        <label class="form-check-label" for="formCheck11">
-                                                            Baru
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-4">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck12">
-                                                        <label class="form-check-label" for="formCheck12">
-                                                            Lama
-                                                        </label>
-                                                    </div>
-                                                    <label for="tempatlahir" class="form-label">Status Kunjungan <span class="text-danger">*</span></label>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck13" >
-                                                        <label class="form-check-label" for="formCheck13">
-                                                            Sakit
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck14" checked>
-                                                        <label class="form-check-label" for="formCheck14">
-                                                            Sehat
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-
-                                        </div>
-                                        <!--end row-->
-                                    </div>
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3">
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label for="hp" class="form-label text-dark">No. Handphone</label>
-                                                    <div class="form-icon">
-                                                        <input type="text" class="form-control form-control-icon" id="hp" placeholder="0821-73707500">
-                                                        <i class="ri-whatsapp-line text-dark"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label for="kunj" class="form-label">Rujukan Dari <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Asal Rujukan</option>
-                                                        <option value="sehat">Diri Sendiri</option>
-                                                        <option value="sakit">PKM Lain</option>
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="asuransi">
+                                                        <option value="" selected> -Asuransi-</option>
+                                                        <option value="BPJS">BPJS</option>
+                                                        <option value="Umum">UMUM</option>
+                                                        <option value="Inhealt">Mandiri Inhealt</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label for="noerm">Nama Perujuk</label>
-                                                    <input type="text" class="form-control" id="noerm" placeholder="Nama Perujuk" />
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="pembayaran">
+                                                        <option value="" selected>-Status Pembayaran-</option>
+                                                        <option value="Lunas" >Sudah Bayar</option>
+                                                        <option value="Belum">Belum Bayar</option>
+                                                        <option value="Gratis">Gratis</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Catatan</label>
-                                                <textarea class="form-control bg-soft-light" id="addrs" rows="3" placeholder="Catatan Rujukan"></textarea>
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="asal">
+                                                        <option value="" selected>-Asal Pendaftaran-</option>
+                                                        <option value="Poli" >Poli</option>
+                                                        <option value="IGD">IGD</option>
+                                                        <option value="Lainnya">Lainnya</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="allruang">
+                                                        <option value="" selected>-Semua Ruangan-</option>
+                                                        <option value="Pilihan" >Pilihan</option>
+                                                        <option value="Pilihan">Pilihan</option>
+                                                        <option value="Pilihan">Pilihan Aktif</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="periksa">
+                                                        <option value="" selected>-Semua Pemeriksaan-</option>
+                                                        <option value="Pilihan" >Pilihan</option>
+                                                        <option value="Pilihan">Pilihan</option>
+                                                        <option value="Pilihan">Pilihan Aktif</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-12 col-lg-2">
+                                                <div class="input-light">
+                                                    <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="layani">
+                                                        <option value="" selected>-Semua Pelayanan-</option>
+                                                        <option value="Pilihan" >Pilihan</option>
+                                                        <option value="Pilihan">Pilihan</option>
+                                                        <option value="Pilihan">Pilihan Aktif</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-12 col-lg-4">
+                                                <input type="text" class="form-control bg-light border-light" id="demo-datepicker" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true" placeholder="01/01/2023">
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-12 col-lg-4">
+                                                <div class="search-box">
+                                                    <input type="text" class="form-control search bg-light border-light" placeholder="Cari data...">
+                                                    <i class="ri-search-line search-icon"></i>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+
+                                            <div class="col-12 col-lg-2">
+                                                <button type="button" class="btn btn-primary w-100" onclick="SearchData();"> <i class="ri-equalizer-fill me-1 align-bottom"></i>
+                                                    Filters
+                                                </button>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-12 col-lg-2">
+                                                <button type="button" class="btn btn-warning w-100"> <i class="ri-history-line me-1 align-bottom"></i>
+                                                    Reset
+                                                </button>
                                             </div>
                                             <!--end col-->
                                         </div>
                                         <!--end row-->
-                                    </div>
+                                    </form>
+                                </div>
 
+                                <div class="card-body">
+                                    <p class="text-muted">Use <code>table</code> class to show bootstrap-based default table.</p>
+                                    <div class="live-preview">
+                                        <div class="table-responsive">
+                                            <!-- Hoverable Rows -->
+                                            <table class="table table-hover table-nowrap mb-0">
+                                                <thead class="bg-info">
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Tanggal Pendaftaran</th>
+                                                        <th scope="col">No. Pendaftaran</th>
+                                                        <th scope="col">Data Pasien</th>
+                                                        <th scope="col">Penyakit Khusus</th>
+                                                        <th scope="col">Ruangan Daftar</th>
+                                                        <th scope="col">Asuransi</th>
+                                                        <th scope="col">Status Pembayaran</th>
+                                                        <th scope="col">Status BPJS</th>
+                                                        <th scope="col">Kunjungan</th>
+                                                        <th scope="col">Status Pelayanan</th>
+                                                        <th scope="col">Cetak</th>
 
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-4">
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tempatlahir" class="form-label">Keadaan/Kelainan Pasien <span class="text-danger">*</span></label>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck1">
-                                                        <label class="form-check-label" for="formCheck1">
-                                                            Handayan
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck2">
-                                                        <label class="form-check-label" for="formCheck2">
-                                                            Difabel
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-4">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck3" checked>
-                                                        <label class="form-check-label" for="formCheck3">
-                                                            Lansia
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="formCheck4" checked>
-                                                        <label class="form-check-label" for="formCheck4">
-                                                            Promotif Preventif
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="experience-Input" class="form-label">Asuransi <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Asuransi</option>
-                                                        <option value="0 Year">Umum</option>
-                                                        <option value="2 Yeasr">BPJS</option>
-                                                        <option value="3 Years">Mandiri Inhealt</option>
-                                                        <option value="4 Years">Prudentials</option>
-                                                        <option value="5 Years">Sinarmas</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>1126</td>
+                                                        <td>01/09/2023 | 07:23:35</td>
+                                                        <td>012</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li class="text-decoration-underline">Ine Febrianti</li>
+                                                                <li>eRM : 2300012310</li>
+                                                                <li>NIK : 1601021709890001</li>
+                                                                <li>No. Dok. RM : 102380131928</li>
+                                                                <li>Tgl. Lahir : 17/09/1989</li>
+                                                                <li>Umur : 34 Tahun</li>
+                                                                <li>Kelurahan : Indralaya</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>
+                                                            <span class="btn text-bg-warning"> </span>
+                                                            <span class="btn text-bg-danger"> </span>
+                                                            <span class="btn text-bg-dark"> </span>
 
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tp" class="form-label">Tarif Pendaftaran <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="tp" placeholder="Tarif Pendaftaran" required/>
-                                                </div>
-                                                <div class="form-check mt-2">
-                                                    <input class="form-check-input" type="checkbox" id="formCheck5">
-                                                    <label class="form-check-label" for="formCheck5">
-                                                        Status Bayar
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tempatlahir" class="form-label">Tempat Lahir <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir" required/>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="card card-light">
-                                                    <div class="card-header">
-                                                        <span>Penanggung Jawab Pasien</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="nms" class="form-label text-dark">Nama</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="nms" placeholder="Nama penanggung jawab pasien" required/>
-                                                                        <i class="ri-user-3-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
+                                                        </td>
+                                                        <td><span class="text-decoration-underline">Laboratorium</span> <br> SAKIT</td>
+                                                        <td>
+                                                            <span class="text-decoration-underline">BPJS Kesehatan</span> 
+                                                            <br>
+                                                            <ul>
+                                                                <li>Status : PENDAFTARAN</li>
+                                                                <li>PRB : Tidak</li>
+                                                                <li>Prolanis : Tidak</li>
+                                                            </ul>
+                                                        
+                                                        </td>
+                                                        <td>
+                                                            <!-- Custom Checkboxes Color -->
+                                                            <div class="form-check mb-3">
+                                                                <input class="form-check-input" type="checkbox" id="formCheck6" checked>
+                                                                <label class="form-check-label" for="formCheck6">
+                                                                    Sudah Bayar
+                                                                </label>
                                                             </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="kab" class="form-label text-dark">Hubungan</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="kab" placeholder="Hubungan degan pasien">
-                                                                        <i class="ri-service-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>LAMA</td>
+                                                        <td>Pendaftaran</td>
+                                                        <td>
+                                                            <!-- Buttons with Label -->
+                                                            <button type="button" class="btn btn-primary btn-label waves-effect waves-light">
+                                                                <i class="ri-printer-line label-icon align-middle fs-16 me-2"></i> Cetak
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>1126</td>
+                                                        <td>01/09/2023 | 07:23:35</td>
+                                                        <td>012</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li class="text-decoration-underline">Ine Febrianti</li>
+                                                                <li>eRM : 2300012310</li>
+                                                                <li>NIK : 1601021709890001</li>
+                                                                <li>No. Dok. RM : 102380131928</li>
+                                                                <li>Tgl. Lahir : 17/09/1989</li>
+                                                                <li>Umur : 34 Tahun</li>
+                                                                <li>Kelurahan : Indralaya</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>
+                                                            <span class="btn text-bg-warning"> </span>
+                                                            <span class="btn text-bg-danger"> </span>
+                                                            <span class="btn text-bg-dark"> </span>
+
+                                                        </td>
+                                                        <td><span class="text-decoration-underline">Laboratorium</span> <br> SAKIT</td>
+                                                        <td>
+                                                            <span class="text-decoration-underline">BPJS Kesehatan</span> 
+                                                            <br>
+                                                            <ul>
+                                                                <li>Status : PENDAFTARAN</li>
+                                                                <li>PRB : Tidak</li>
+                                                                <li>Prolanis : Tidak</li>
+                                                            </ul>
+                                                        
+                                                        </td>
+                                                        <td>
+                                                            <!-- Custom Checkboxes Color -->
+                                                            <div class="form-check mb-3">
+                                                                <input class="form-check-input" type="checkbox" id="formCheck6" checked>
+                                                                <label class="form-check-label" for="formCheck6">
+                                                                    Sudah Bayar
+                                                                </label>
                                                             </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="hp" class="form-label text-dark">No. Handphone Penanggung Jawab Pasien</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="hp" placeholder="0821-73707500">
-                                                                        <i class="ri-whatsapp-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>LAMA</td>
+                                                        <td>Pendaftaran</td>
+                                                        <td>
+                                                            <!-- Buttons with Label -->
+                                                            <button type="button" class="btn btn-primary btn-label waves-effect waves-light">
+                                                                <i class="ri-printer-line label-icon align-middle fs-16 me-2"></i> Cetak
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>1126</td>
+                                                        <td>01/09/2023 | 07:23:35</td>
+                                                        <td>012</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li class="text-decoration-underline">Ine Febrianti</li>
+                                                                <li>eRM : 2300012310</li>
+                                                                <li>NIK : 1601021709890001</li>
+                                                                <li>No. Dok. RM : 102380131928</li>
+                                                                <li>Tgl. Lahir : 17/09/1989</li>
+                                                                <li>Umur : 34 Tahun</li>
+                                                                <li>Kelurahan : Indralaya</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>
+                                                            <span class="btn text-bg-warning"> </span>
+                                                            <span class="btn text-bg-danger"> </span>
+                                                            <span class="btn text-bg-dark"> </span>
+
+                                                        </td>
+                                                        <td><span class="text-decoration-underline">Laboratorium</span> <br> SAKIT</td>
+                                                        <td>
+                                                            <span class="text-decoration-underline">BPJS Kesehatan</span> 
+                                                            <br>
+                                                            <ul>
+                                                                <li>Status : PENDAFTARAN</li>
+                                                                <li>PRB : Tidak</li>
+                                                                <li>Prolanis : Tidak</li>
+                                                            </ul>
+                                                        
+                                                        </td>
+                                                        <td>
+                                                            <!-- Custom Checkboxes Color -->
+                                                            <div class="form-check mb-3">
+                                                                <input class="form-check-input" type="checkbox" id="formCheck6" checked>
+                                                                <label class="form-check-label" for="formCheck6">
+                                                                    Sudah Bayar
+                                                                </label>
                                                             </div>
-                                                            <!--end col-->
-                
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-                                            
-
-                                            <div class="col-12">
-                                                <div class="card bg-soft-info">
-                                                    <div class="card-header bg-info">
-                                                        <span class="text-white">Data Skrining</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="table-responsive">
-                                                            <!-- Tables Border Colors -->
-                                                            <table class="table table-bordered border-secondary table-nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">Skrining</th>
-                                                                        <th scope="col">Tanggal</th>
-                                                                        <th scope="col">Keterangan</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-12">
-                                                <div class="card bg-soft-info">
-                                                    <div class="card-header bg-info">
-                                                        <span class="text-white">Penyakit Khusus</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="table-responsive">
-                                                            <!-- Tables Border Colors -->
-                                                            <table class="table table-bordered border-secondary table-nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">Warna</th>
-                                                                        <th scope="col">ICDX</th>
-                                                                        <th scope="col">Penyakit</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-12">
-                                                <div class="card bg-soft-info">
-                                                    <div class="card-header bg-info">
-                                                        <span class="text-white">Resiko Kehamilan</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="table-responsive">
-                                                            <!-- Tables Border Colors -->
-                                                            <table class="table table-bordered border-secondary table-nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">Warna</th>
-                                                                        <th scope="col">Skor Ibu (KSPR)</th>
-                                                                        <th scope="col">Status</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-12">
-                                                <div class="card card-light">
-                                                    <div class="card-header">
-                                                        <span>Riwayat Pendaftaran Hari Ini</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="table-responsive">
-                                                            <!-- Tables Border Colors -->
-                                                            <table class="table table-bordered border-secondary table-nowrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">Tanggal</th>
-                                                                        <th scope="col">Poli / Ruangan</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>-</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>LAMA</td>
+                                                        <td>Pendaftaran</td>
+                                                        <td>
+                                                            <!-- Buttons with Label -->
+                                                            <button type="button" class="btn btn-primary btn-label waves-effect waves-light">
+                                                                <i class="ri-printer-line label-icon align-middle fs-16 me-2"></i> Cetak
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                     
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
 
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3 mb-3">
-                                            <div class="mt-4 mb-3">
-                                                <textarea class="form-control alert alert-success" id="exampleFormControlTextarea1" placeholder="Notes" rows="2" required>All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row g-3 mb-3">
-                                            <div class="col-12 col-lg-3">
-                                                <div>
-                                                    <label for="instal" class="form-label">Intalasi <span class="text-danger">*</span></label>
-                                                    <div class="" id="instal">
-                                                        <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                            <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                            <div class="card-body card-info">
-                                                                <a class="d-flex align-items-center" href="#" role="button">
-                                                                    <!-- <div class="flex-shrink-0">
-                                                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                    </div> -->
-                                                                    <div class="flex-grow-1 ms-4">
-                                                                        <h6 class="fs-14 mb-1 text-white">Rawat Jalan</h6>
-                                                                        <p class="text-white-50 mb-0">Layanan Poli</p>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-12 col-lg-3">
-                                                <div>
-                                                    <label for="instal" class="form-label"> <span class="text-danger">*</span></label>
-                                                    <div class="" id="instal">
-                                                        <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                            <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                            <div class="card-body card-info">
-                                                                <a class="d-flex align-items-center" href="#" role="button">
-                                                                    <!-- <div class="flex-shrink-0">
-                                                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                    </div> -->
-                                                                    <div class="flex-grow-1 ms-4">
-                                                                        <h6 class="fs-14 mb-1 text-white">Rawat Inap</h6>
-                                                                        <p class="text-white-50 mb-0">Layanan Instalasi Rawat Inap</p>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div>
-
-                                        <div class="row g-3">
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-lg-3">
-                                                        <label for="poli" class="form-label">Poli / Ruangan <span class="text-danger">*</span></label>
-                                                        <div class="" id="poli">
-                                                            <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                                <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                                <div class="card-body card-info">
-                                                                    <a class="d-flex align-items-center" href="#" role="button">
-                                                                        <div class="flex-shrink-0">
-                                                                            <img src="assets/images/logo1.png" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1 ms-4">
-                                                                            <h6 class="fs-14 mb-1 text-white">Poli Gizi</h6>
-                                                                            <p class="text-white-50 mb-0">Poliklinik</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <label for="poli" class="form-label"> <span class="text-danger">*</span></label>
-                                                        <div class="" id="poli">
-                                                            <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                                <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                                <div class="card-body card-info">
-                                                                    <a class="d-flex align-items-center" href="#" role="button">
-                                                                        <div class="flex-shrink-0">
-                                                                            <img src="assets/images/logo1.png" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1 ms-4">
-                                                                            <h6 class="fs-14 mb-1 text-white">Poli KIA</h6>
-                                                                            <p class="text-white-50 mb-0">Poliklinik</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <label for="poli" class="form-label"> <span class="text-danger">*</span></label>
-                                                        <div class="" id="poli">
-                                                            <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                                <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                                <div class="card-body card-info">
-                                                                    <a class="d-flex align-items-center" href="#" role="button">
-                                                                        <div class="flex-shrink-0">
-                                                                            <img src="assets/images/logo1.png" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1 ms-4">
-                                                                            <h6 class="fs-14 mb-1 text-white">Poli Gigi</h6>
-                                                                            <p class="text-white-50 mb-0">Poliklinik</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3">
-                                                        <label for="poli" class="form-label"> <span class="text-danger">*</span></label>
-                                                        <div class="" id="poli">
-                                                            <div class="card mb-1 ribbon-box ribbon-fill ribbon-sm">
-                                                                <div class="ribbon ribbon-warning"><i class=" ri-home-heart-line"></i></div>
-                                                                <div class="card-body card-info">
-                                                                    <a class="d-flex align-items-center" href="#" role="button">
-                                                                        <div class="flex-shrink-0">
-                                                                            <img src="assets/images/logo1.png" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1 ms-4">
-                                                                            <h6 class="fs-14 mb-1 text-white">Poli Mata</h6>
-                                                                            <p class="text-white-50 mb-0">Poliklinik</p>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div>
-
-                                        </div>
+                                    <div class="text-end mt-3 mb-2">
+                                        <!-- <button type="submit" class="btn btn-danger w-sm">Delete</button> -->
+                                        <button type="button" id="custom-sa-hapus" class="btn btn-danger add-btn" ><i class=" ri-delete-bin-line align-bottom me-1"></i> Hapus</button>
                                     </div>
 
-                                </form>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="pt-3 border-top border-top-dashed mt-4">
+                                                <h6 class="mb-3 fw-semibold text-uppercase">Keterangan Penyakit Khusus :</h6>
+                                                <div class="row g-3">
+                                                    <div class="col-12">
+                                                        <div class="mb-2">
+                                                            <p class="text-uppercase fw-medium">Ket-Penyakit-1</p>
+                                                            <div class="btn bg-warning fs-12"> </div>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <p class="text-uppercase fw-medium">Ket-Penyakit-2</p>
+                                                            <div class="btn bg-danger fs-12"> </div>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <p class="text-uppercase fw-medium">Ket-Penyakit-3</p>
+                                                            <div class="btn bg-dark fs-12"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end row -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+ 
                             </div>
                         </div>
-                        <!--end col-->
                     </div>
-                    <!--end row-->
 
+                    <div class="row g-0 text-center text-sm-start align-items-center mb-4">
+                        <div class="col-sm-6">
+                            <div>
+                                <p class="mb-sm-0 text-muted">Showing <span class="fw-semibold">1</span> to <span class="fw-semibold">10</span> of <span class="fw-semibold text-decoration-underline">12</span> entries</p>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-sm-6">
+                            <ul class="pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                <li class="page-item disabled">
+                                    <a href="#" class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item ">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">Next</a>
+                                </li>
+                            </ul>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
 
 
 
@@ -1185,8 +1050,7 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
     <!-- Sweet Alerts js -->
     <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
