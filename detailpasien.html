@@ -41,7 +41,7 @@
             <div class="d-flex">
                 <!-- LOGO -->
                 <div class="navbar-brand-box horizontal-logo">
-                    <a href="__dashboard.html" class="logo logo-dark">
+                    <a href="./dashboard.html" class="logo logo-dark">
                         <span class="logo-sm">
                             <img src="assets/images/logligth.png" alt="" height="40">
                         </span>
@@ -50,7 +50,7 @@
                         </span>
                     </a>
 
-                    <a href="__dashboard.html" class="logo logo-light">
+                    <a href="./dashboard.html" class="logo logo-light">
                         <span class="logo-sm">
                             <img src="assets/images/logdark.png" alt="" height="40">
                         </span>
@@ -83,8 +83,8 @@
                             </div>
 
                             <div class="dropdown-item bg-transparent text-wrap">
-                                <a href="__dashboard.html" class="btn btn-soft-secondary btn-sm btn-rounded">how to setup <i class="mdi mdi-magnify ms-1"></i></a>
-                                <a href="__dashboard.html" class="btn btn-soft-secondary btn-sm btn-rounded">buttons <i class="mdi mdi-magnify ms-1"></i></a>
+                                <a href="./dashboard.html" class="btn btn-soft-secondary btn-sm btn-rounded">how to setup <i class="mdi mdi-magnify ms-1"></i></a>
+                                <a href="./dashboard.html" class="btn btn-soft-secondary btn-sm btn-rounded">buttons <i class="mdi mdi-magnify ms-1"></i></a>
                             </div>
                             <!-- item-->
                             <div class="dropdown-header mt-2">
@@ -311,7 +311,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
                 <!-- Dark Logo-->
-                <a href="__dashboard.html" class="logo logo-dark">
+                <a href="./dashboard.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/logo-sm.png" alt="" height="22">
                     </span>
@@ -320,7 +320,7 @@
                     </span>
                 </a>
                 <!-- Light Logo-->
-                <a href="__dashboard.html" class="logo logo-light">
+                <a href="./dashboard.html" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="assets/images/logo-sm.png" alt="" height="22">
                     </span>
@@ -341,7 +341,7 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="__dashboard.html">
+                            <a class="nav-link menu-link" href="./dashboard.html">
                                 <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboards</span>
                             </a>
                         </li> <!-- end Dashboard Menu -->
@@ -352,7 +352,7 @@
                             <div class="collapse menu-dropdown" id="sidebarApps">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="__datapasien.html" class="nav-link" data-key="t-calendar"> Data Pasien </a>
+                                        <a href="./datapasien.html" class="nav-link" data-key="t-calendar"> Data Pasien </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link" data-key="t-chat"> Data Petugas </a>
@@ -378,16 +378,16 @@
                             <div class="collapse menu-dropdown" id="sidebarLayouts">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="__listpendaftaran.html" class="nav-link" data-key="t-horizontal">Pendaftaran</a>
+                                        <a href="./listpendaftaran.html" class="nav-link" data-key="t-horizontal">Pendaftaran</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#"  class="nav-link" data-key="t-detached">Medis</a>
+                                        <a href="#" class="nav-link" data-key="t-detached">Medis</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#"  class="nav-link" data-key="t-two-column">Resep</a>
+                                        <a href="#" class="nav-link" data-key="t-two-column">Resep</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#"  class="nav-link" data-key="t-hovered">Obat Pasien</a>
+                                        <a href="#" class="nav-link" data-key="t-hovered">Obat Pasien</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Pelayanan Luar
@@ -604,366 +604,237 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Buat Data Pasien</h4>
+                                <h4 class="mb-sm-0">Detail Data Pasien</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Master Data</a></li>
-                                        <li class="breadcrumb-item active">Buat Data Pasien</li>
+                                        <li class="breadcrumb-item active">Detail Data Pasien</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
 
-                    <div class="row justify-content-center">
-                        <div class="col-12">
-                            <div class="card">
-                                <form class="needs-validation" novalidate id="invoice_form">
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3">
-                                            <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                                                <button type="button" id="sa-simpan" class="btn btn-success"><i class="ri-save-line align-bottom me-1"></i> Simpan</button>
-                                                <a href="__datapasien.html" class="btn btn-primary"><i class="ri-eye-line align-bottom me-1"></i> Lihat Semua</a>
-                                                <a href="javascript:void(0);" class="btn btn-danger"><i class="ri-restart-line align-bottom me-1"></i> Reset</a>
-                                            </div>
-           
-                                            <div class="mt-4">
-                                                <label for="exampleFormControlTextarea1" class="form-label text-muted text-uppercase fw-semibold">NOTES</label>
-                                                <textarea class="form-control alert alert-info" id="exampleFormControlTextarea1" placeholder="Notes" rows="2" required>All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</textarea>
-                                            </div>
-
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" id="tasksList">
+                                <div class="card-header border-0">
+                                    <div class="d-flex align-items-center">
+                                        <h5 class="card-title mb-0 flex-grow-1">Lihat Data Pasien</h5>
+                                        <div class="flex-shrink-0">
+                                           <div class="d-flex flex-wrap gap-2">
+                                                <a class="btn btn-primary add-btn" type="button" href="./datapasien.html"><i class="ri-eye-2-line align-bottom me-1"></i> Lihat Semua</a>
+                                                <a class="btn btn-primary add-btn" type="button" href="./buat_data_pasien.html"><i class="ri-add-line align-bottom me-1"></i> Buat Baru</a>
+                                                <a class="btn btn-primary add-btn" type="button" href="#"><i class="ri-user-heart-line align-bottom me-1"></i> Koreksi Umur</a>
+                                                <a class="btn btn-info add-btn" type="button" href="./listpendaftaran.html"><i class="ri-wheelchair-line align-bottom me-1"></i> Pendaftaran</a>
+                                                <a class="btn btn-info add-btn" type="button" href="#"><i class="ri-flask-line align-bottom me-1"></i> Pendaftaran Laboratorium</a>
+                                                <a class="btn btn-danger add-btn" type="button" href="#"><i class="ri-history-line align-bottom me-1"></i> Lihat Riwayat</a>
+                                           </div>
                                         </div>
                                     </div>
-
-                                    <div class="card-body p-4">
-                                        <div class="row g-3">
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="same" name="same" onchange="billingFunction()" />
-                                                    <label class="form-check-label" for="same">
-                                                        Data Pasien Diverifikasi (Lengkap)
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Data PKM Lain</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Data PKM Lain">
-                                                    <button class="btn btn-warning" type="button" id="button-addon2"><i class="ri-search-line"></i> <i class="ri-profile-line"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="choices-payment-status">Asuransi</label>
-                                                <div class="input-light">
-                                                    <select class="form-control bg-light border-0" data-choices data-choices-search-false id="choices-payment-status" required>
-                                                        <option value="">BPJS</option>
-                                                        <option value="Sinarmas">Sinarmas</option>
-                                                        <option value="Inhealt">Mandiri Inhealt</option>
-                                                        <option value="Prudentials">Prudentials</option>
-                                                        <option value="Lainnya">... Lainnya</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Nomor Asuransi</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Nomor Asuransi">
-                                                    <button class="btn btn-success" type="button" id="button-addon2"><i class="ri-search-line"></i> <i class="ri-profile-line"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-
-                                        </div>
-                                        <!--end row-->
-                                    </div>
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3">
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Nomor Kartu Keluarga</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Data PKM Lain">
-                                                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="ri-search-line"></i> <i class="ri-profile-line"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label for="noerm">No. E-Rekam Medik</label>
-                                                    <input type="text" class="form-control bg-light border-0" id="noerm" placeholder="Otomatis Terisi" readonly />
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Nomor Dokumen Rekam Medik</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Data PKM Lain">
-                                                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="ri-search-line"></i> <i class="ri-profile-line"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-                                            <div class="col-lg-3 col-sm-6">
-                                                <label for="button-addon2">Nomor Rekam Medik Lama</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Data PKM Lain">
-                                                    <button class="btn btn-primary" type="button" id="button-addon2"><i class="ri-search-line"></i> <i class="ri-profile-line"></i></button>
-                                                </div>
-                                            </div>
-                                            <!--end col-->
-
-                                        </div>
-                                        <!--end row-->
-                                    </div>
-
-
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-4">
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="nik" class="form-label">NIK <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="nik" placeholder="Nomor Induk Kependudukan" required />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="name" class="form-label">Nama Pasien <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="name" placeholder="Nama Pasien" required/>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tempatlahir" class="form-label">Tempat Lahir <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir" required/>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tglahir" class="form-label">Tanggal Lahir <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="tglahir" placeholder="28/01/1990" required/>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="goldarah" class="form-label">Golongan Darah <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Golongan Darah</option>
-                                                        <option value="0 Year">A</option>
-                                                        <option value="2 Yeasr">B</option>
-                                                        <option value="3 Years">AB</option>
-                                                        <option value="4 Years">O</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="tempatlahir" class="form-label">Tempat Lahir <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir" required/>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="card card-light">
-                                                    <div class="card-header">
-                                                        <span>Alamat Tempat Tinggal / KTP Sama</span>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="prop" class="form-label text-dark">Provinsi</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="prop" placeholder="Provinsi">
-                                                                        <i class="ri-search-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="kab" class="form-label text-dark">Kabupaten/Kota</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="kab" placeholder="Kabupaten">
-                                                                        <i class="ri-search-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="kec" class="form-label text-dark">Kecamatan</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="kec" placeholder="Kecamatan">
-                                                                        <i class="ri-search-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3">
-                                                                <div>
-                                                                    <label for="desa" class="form-label text-dark">Desa/Kelurahan</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="desa" placeholder="Desa/Kelurahan">
-                                                                        <i class="ri-search-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-12 mt-4">
-                                                                <div>
-                                                                    <label for="addrs" class="form-label text-dark">Alamat Lengkap</label>
-                                                                    <textarea class="form-control bg-white border-0" id="addrs" rows="3" placeholder="Alamat Lengkap"></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-6 mt-4">
-                                                                <div>
-                                                                    <label for="email" class="form-label text-dark">Email</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="email" class="form-control form-control-icon" id="email" placeholder="example@gmail.com">
-                                                                        <i class="ri-mail-unread-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3 mt-4">
-                                                                <div>
-                                                                    <label for="tlp" class="form-label text-dark">No. Telepon</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="tlp" placeholder="0711-73707500">
-                                                                        <i class="ri-phone-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
-                                                            <div class="col-lg-3 mt-4">
-                                                                <div>
-                                                                    <label for="hp" class="form-label text-dark">No. Handphone</label>
-                                                                    <div class="form-icon">
-                                                                        <input type="text" class="form-control form-control-icon" id="hp" placeholder="0821-73707500">
-                                                                        <i class="ri-whatsapp-line text-dark"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--end col-->
+                                </div>
+                                <div class="card-body border border-dashed border-end-0 border-start-0">
+                                    <div class="row">
+                                        <div class="col-lg-4 border border-dashed border-start-0 border-top-0 border-bottom-0">
+                                            <div class="">
+                                                <div class="card-body p-4">
+                                                    <div>
+                                                        <div class="table-responsive">
+                                                            <table class="table mb-0 table-borderless">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Puskesmas</span></th>
+                                                                        <td>
+                                                                            <span class="badge badge-label bg-primary"><i class="mdi mdi-circle-medium"></i>PKM Indralaya</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">No. ERM</span></th>
+                                                                        <td class="fw-bold">23-01015674</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Asuransi</span></th>
+                                                                        <td>
+                                                                            <span class="badge badge-outline-success">BPJS Kesehatan</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">No. Asuransi</span></th>
+                                                                        <td class="fw-bold"><a href="javascript:void(0);" class="link-primary">000193939929911</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">No. KK</span></th>
+                                                                        <td>161239876654321</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">NIK</span></th>
+                                                                        <td>161239876650001</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Nama</span></th>
+                                                                        <td class="fw-bold">Wulan</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Jenis Kelamin</span></th>
+                                                                        <td>Perempuan</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Tempat/Tgl.Lahir</span></th>
+                                                                        <td>Aceh, 01/12/1999</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Berat Badan</span></th>
+                                                                        <td>65 Kg</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Tinggi Badan</span></th>
+                                                                        <td>175 Cm</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div><!-- end col -->
-                                            
-
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="experience-Input" class="form-label">Pekerjaan <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Pekerjaan</option>
-                                                        <option value="0 Year">Tidak/Belum Bekerja</option>
-                                                        <option value="2 Yeasr">PNS (Selain TNI/Polri)</option>
-                                                        <option value="3 Years">TNI/Polri</option>
-                                                        <option value="4 Years">Karyawan Swasta</option>
-                                                        <option value="5 Years">Wiraswasta</option>
-                                                        <option value="5 Years">Petani/Pekebun</option>
-                                                        <option value="5 Years">Nelayan</option>
-                                                        <option value="5 Years">Sopir/Ojek</option>
-                                                    </select>
-                                                </div>
+                                                <!--end card-body-->
                                             </div>
-
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="experience-Input" class="form-label">Agama <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Agama</option>
-                                                        <option value="0 Year">Islam</option>
-                                                        <option value="2 Yeasr">Katolik</option>
-                                                        <option value="3 Years">Protestan</option>
-                                                        <option value="4 Years">Budha</option>
-                                                        <option value="5 Years">Hindu</option>
-                                                        <option value="5 Years">Konguchu</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="experience-Input" class="form-label">Pendidikan <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Pendidikan</option>
-                                                        <option value="0 Year">Belum Sekolah</option>
-                                                        <option value="2 Yeasr">SD</option>
-                                                        <option value="3 Years">SMP</option>
-                                                        <option value="4 Years">SMA</option>
-                                                        <option value="5 Years">DI</option>
-                                                        <option value="5 Years">DII</option>
-                                                        <option value="5 Years">DIII</option>
-                                                        <option value="5 Years">DIV</option>
-                                                        <option value="5 Years">S1</option>
-                                                        <option value="5 Years">S2</option>
-                                                        <option value="5 Years">S3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label for="experience-Input" class="form-label">Status Pernikahan <span class="text-danger">*</span></label>
-                                                    <select class="form-control" data-choices name="experience-Input">
-                                                        <option value="">Pilih Status</option>
-                                                        <option value="0 Year">Belum Menikah</option>
-                                                        <option value="2 Yeasr">Menikah</option>
-                                                        <option value="3 Years">Janda/Dua</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="nis" class="form-label">Nama Isteri/Suami</label>
-                                                    <input type="text" class="form-control" id="nis" placeholder="Nama Isteri/Suami" required />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="ibukandung" class="form-label">Nama Ibu Kandung</label>
-                                                    <input type="text" class="form-control" id="ibukandung" placeholder="Nama Ibu Kandung" required />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="ayah" class="form-label">Nama Ayah <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="ayah" placeholder="Nama Ayah" required />
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <label for="kelg" class="form-label">Status Keluarga <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="kelg" placeholder="Status Keluarga" required />
-                                                </div>
-                                            </div>
-
+                                            <!--end card-->
                                         </div>
-                                    </div>
-
-                                    <div class="card-body p-4 border-top border-top-dashed">
-                                        <div class="row g-3">
-                                            <div class="mt-4">
-                                                <textarea class="form-control alert alert-success" id="exampleFormControlTextarea1" placeholder="Notes" rows="2" required>All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</textarea>
+                                        <div class="col-lg-4 border border-dashed border-start-0 border-top-0 border-bottom-0">
+                                            <div class="">
+                                                <div class="card-body p-4">
+                                                    <div>
+                                                        <div class="table-responsive">
+                                                            <table class="table mb-0 table-borderless">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Kecamatan</span></th>
+                                                                        <td>Indralaya</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Kelurahan</span></th>
+                                                                        <td>Tanjung Seteko</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Alamat</span></th>
+                                                                        <td>Jalan Tol Indralaya-Prabumulih</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">RT/RW</span></th>
+                                                                        <td><a href="javascript:void(0);" class="link-primary">003/010</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Pekerjaan</span></th>
+                                                                        <td>Ibu Rumah Tangga</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Instansi</span></th>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Agama</span></th>
+                                                                        <td>Islam</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Pendidikan</span></th>
+                                                                        <td>SMA/Sederajat</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Status Perkawinan</span></th>
+                                                                        <td>Kawin</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Sumai/Isteri</span></th>
+                                                                        <td>Agung Sedayu</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Status Keluarga</span></th>
+                                                                        <td>Isteri</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th><span class="fw-medium">Kewarganegaraan</span></th>
+                                                                        <td>Indonesia</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end card-body-->
                                             </div>
-
+                                            <!--end card-->
                                         </div>
+                                        <div class="col-lg-4">
+                                            <div class="row">
+                                                <div class="">
+                                                    <div class="card-header bg-info">
+                                                        <span class="text-white">10 Pendaftaran Terakhir</span>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <!-- Tables Border Colors -->
+                                                            <table class="table table-bordered border-secondary table-nowrap">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">No</th>
+                                                                        <th scope="col">Tanggal Daftar</th>
+                                                                        <th scope="col">Instalasi</th>
+                                                                        <th scope="col">Poli/Ruang</th>
+                                                                        <th scope="col">Skrining</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+    
+                                                    </div>
+                                                </div>
+                                                <!--end card-->
+                                            </div>
+                                            <div class="row">
+                                                <div class="">
+                                                    <div class="card-header bg-info">
+                                                        <span class="text-white">Data Anggota Keluarga</span>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <!-- Tables Border Colors -->
+                                                            <table class="table table-bordered border-secondary table-nowrap">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Nama</th>
+                                                                        <th scope="col">Status Keluarga</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Agung Sedayu</td>
+                                                                        <td>Suami</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+    
+                                                    </div>
+                                                </div>
+                                                <!--end card-->
+                                            </div>
+                                        </div>
+                                        <!--end col-->
                                     </div>
-
-                                </form>
+                                </div>
+                                <!--end card-body-->
                             </div>
+                            <!--end card-->
                         </div>
                         <!--end col-->
                     </div>
@@ -1029,8 +900,7 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
     <!-- Sweet Alerts js -->
     <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
