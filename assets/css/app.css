@@ -12509,10 +12509,10 @@ span.flatpickr-weekday {
   background: linear-gradient(-45deg, #0d6efd 50%, #198754);
 }
 .auth-bg-cover > .bg-overlay {
-  background-image: url("../images/cover-pattern.png");
+  background-image: url("../images/4909322.jpg");
   background-position: center;
   background-size: cover;
-  opacity: 1;
+  opacity: 0.3;
   background-color: transparent;
 }
 .auth-bg-cover .footer {
