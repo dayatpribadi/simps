@@ -2,4 +2,6 @@
     background-image: url(../images/medicine.jpg);
     background-size: cover;
     background-position: bottom right;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
