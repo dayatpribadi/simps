@@ -805,7 +805,11 @@
                                                                 </button>
                                                             </div>
                                                         </div><!-- end card header -->
-                                                        <div id="line_chart_annotations" data-colors='["--vz-primary"]' class="apex-charts" dir="ltr"></div>
+                                                        <div class="card-body p-0 pb-2">
+                                                            <div>
+                                                                <div id="projects-overview-chart" data-colors='["--vz-primary", "--vz-warning", "--vz-success"]' dir="ltr" class="apex-charts"></div>
+                                                            </div>
+                                                        </div><!-- end card body -->
                                                     </div>
                                                 </div>
 
@@ -1267,6 +1271,9 @@
     <!-- Vector map-->
     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+        <!-- projects js -->
+        <script src="assets/js/pages/dashboard-projects.init.js"></script>
 
     <!-- Dashboard init -->
     <script src="assets/js/pages/dashboard-analytics.init.js"></script>
