@@ -665,7 +665,7 @@ File: Main Css File
 .footer {
   bottom: 0;
   padding: 20px calc(1.5rem * 0.5);
-  position: absolute;
+  position: fixed;
   right: 0;
   color: var(--vz-footer-color);
   left: 250px;
